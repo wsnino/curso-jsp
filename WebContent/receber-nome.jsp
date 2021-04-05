@@ -12,6 +12,8 @@
 "Nome recebido: " + request.getParameter("nome")
 
 %>
+<p>
+<% response.sendRedirect("https://podermagnetico.wordpress.com/2018/12/16/56o-anjo-planetario-poiel/");%>
 
 
 </body>

@@ -3,8 +3,6 @@ package connection;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-import com.sun.jdi.connect.IllegalConnectorArgumentsException;
-
 public class SingleConnection {
 
 	private static String banco = "jdbc:postgresql://localhost:5432/curso-jsp?autoReconnect=true";

@@ -31,6 +31,7 @@ public class Filter implements javax.servlet.Filter {
 			connection.commit();
 		}catch (Exception e) {
 			try {
+			e.printStackTrace();	
 			connection.rollback();
 			}catch (Exception e1) {
 				e1.printStackTrace();

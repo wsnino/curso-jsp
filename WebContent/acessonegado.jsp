@@ -7,14 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%=
 
-"Nome recebido: " + request.getParameter("nome")
 
-%>
-<p>
-<% response.sendRedirect("https://podermagnetico.wordpress.com/2018/12/16/56o-anjo-planetario-poiel/");%>
-
+<h2>Acesso negado ao sistema para o usuário</h2>
 
 </body>
 </html>

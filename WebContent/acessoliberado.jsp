@@ -10,10 +10,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<jsp:setProperty property="*" name="calcula"/>
 	<h3>Seja ben vindo ao sistema em jsp</h3>
 
-	<a href="cadastrousuario.jsp">Cadastro de usuários</a>
-	
+	<a href="cadastrousuario.jsp">Cadastro de usuários</a>	
 </body>
 </html>

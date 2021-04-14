@@ -5,15 +5,18 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 <title>Cadastro de usuário</title>
 <link rel="stylesheet" href="resources/css/cadastro.css">
 </head>
 <body>
 	<center>
 		<h1>Cadastro de usuário</h1>
-	</center>
-
-	<form action="salvarUsuario" method="post">
+		<h3 style="color: orange;">${msg}</h3>
+	</center>	
+	<form action="salvarUsuario" method="post" id="formUser">
 		<ul class="form-style-1">
 			<li>
 
@@ -44,17 +47,16 @@
 					
 					<tr>
 						<td></td>
-						<td><input type="submit" value="Salvar"></td>
+						<td><input type="submit" value="Salvar"> <input type="submit" value="Cancelar" onclick="document.getElementById('formUser').action = 'salvarUsuario?acao=reset'"></td>										
 					</tr>
 				</table>
 			</li>
 		</ul>
 	</form>
-
-	<div class="container">
-		<table class="responsive-table">
+	<div class="w3-container">	
+		<table class="w3-table">
 			<caption>Usuários cadastrados</caption>
-			<tr>
+			<tr style="background-color: #88D5E9">
 				<th>Id</th>
 				<th>Login</th>
 				<th>Nome</th>
@@ -69,16 +71,16 @@
 						</c:out></td>
 					<td><c:out value="${user.nome}"></c:out></td>
 
-					<td><a href="salvarUsuario?acao=delete&user=${user.login}"><img
+					<td><a href="salvarUsuario?acao=delete&user=${user.id}"><img
 							src="resources/img/excluir.png" alt="excluir" title="Excluir"
 							width="20px" height="20px"></a></td>
 					</td>
-					<td><a href="salvarUsuario?acao=editar&user=${user.login}"><img
+					<td><a href="salvarUsuario?acao=editar&user=${user.id}"><img
 							src="resources/img/edite1.png" alt="editar" title="Editar"
 							width="20px" height="20px"></a></td>
 				</tr>
 			</c:forEach>
 		</table>
-	</div>
+		</div>
 </body>
 </html>

@@ -61,10 +61,10 @@ public class DaoUsuario {
 		return listar;
 	}
 	
-	public void delete (String login) {
+	public void delete (String id) {
 		
 		try {
-		String sql = "delete from usuario where login = '" + login + "'";
+		String sql = "delete from usuario where id = '" + id + "'";
 		PreparedStatement preparedStatement = connection.prepareStatement(sql);
 		preparedStatement.execute();
 		
@@ -79,8 +79,8 @@ public class DaoUsuario {
 		}
 	}
 
-	public BeanCursoJsp consultar(String login)throws Exception {
-		String sql = "select * from usuario where login ='" + login +"'";
+	public BeanCursoJsp consultar(String id)throws Exception {
+		String sql = "select * from usuario where id ='" + id +"'";
 		
 		PreparedStatement preparedStatement = connection.prepareStatement(sql);
 		ResultSet resultSet = preparedStatement.executeQuery();
@@ -94,6 +94,19 @@ public class DaoUsuario {
 		}
 		
 		return null;
+	}
+	
+	public boolean validarLogin(String login)throws Exception {
+		String sql = "select count(1) as qtd from usuario where login ='" + login +"'";
+		
+		PreparedStatement preparedStatement = connection.prepareStatement(sql);
+		ResultSet resultSet = preparedStatement.executeQuery();
+		if (resultSet.next()) {
+										
+			return resultSet.getInt("qtd") <= 0;							
+		}
+		
+		return false;
 	}
 
 	public void atualizar(BeanCursoJsp usuario) {

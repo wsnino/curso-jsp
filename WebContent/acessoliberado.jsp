@@ -7,12 +7,16 @@
 <html>
 <head>
 <meta http-equiv="content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>ms sistemas</title>
 </head>
-<body>
+<body style="background-color: #b3b3b3;">
 	<jsp:setProperty property="*" name="calcula"/>
-	<h3>Seja ben vindo ao sistema em jsp</h3>
+	<center>
+	<h1>Seja bem vindo ao sistema em jsp</h1>
 
-	<a href="salvarUsuario?acao=listartodos">Cadastro de usuários</a>	
+	<a href="salvarUsuario?acao=listartodos"><img
+				src="resources/img/cadastrousuario.png" alt="cadastro de usuário" title="cadastro de usuário"
+				width="110px" height="110px"></a></td>	
+	</center>						
 </body>
 </html>

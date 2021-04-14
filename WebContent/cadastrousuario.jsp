@@ -46,6 +46,12 @@
 					</tr>
 					
 					<tr>
+						<td>Fone:</td>
+						<td><input type="tel" id="fone" name="fone"
+							value="${user.fone}"></td>
+					</tr>
+					
+					<tr>
 						<td></td>
 						<td><input type="submit" value="Salvar"> <input type="submit" value="Cancelar" onclick="document.getElementById('formUser').action = 'salvarUsuario?acao=reset'"></td>										
 					</tr>
@@ -60,6 +66,7 @@
 				<th>Id</th>
 				<th>Login</th>
 				<th>Nome</th>
+				<th>Fone</th>
 				<th>Delete</th>
 				<th>Editar</th>
 			</tr>
@@ -70,6 +77,7 @@
 					<td style="width: 150px"><c:out value="${user.login}">
 						</c:out></td>
 					<td><c:out value="${user.nome}"></c:out></td>
+					<td><c:out value="${user.fone}"></c:out></td>
 
 					<td><a href="salvarUsuario?acao=delete&user=${user.id}"><img
 							src="resources/img/excluir.png" alt="excluir" title="Excluir"
